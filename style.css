@@ -1,0 +1,174 @@
+/* EXTERNAL */
+.color {
+    color: hsl(233, 47%, 7%); /*Very dark blue (main background)*/
+    color: hsl(244, 38%, 16%); /*Dark desaturated blue (card background)*/
+    color: hsl(277, 64%, 61%); /*Soft violet (accent)*/
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+/*
+font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+*/
+/* GENERAL */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: white; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 100vw;
+    min-height: 120vh;
+    background: hsl(233, 47%, 7%);
+}
+
+/* SPECIFY */
+
+.card {
+    width: 1110px;
+    height: 445px;
+    border-radius: 10px;
+    background: hsl(244, 38%, 16%);
+    color: white;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    display: flex;
+}
+    .card .desktop {
+        width: 540px;
+        height: 100%;
+        background: url(images/image-header-desktop.jpg);
+        border-radius: 0 10px 10px 0;
+        background-position: center;
+        background-size: cover;
+    }
+        .card .desktop .cover {
+            width: 540px;
+            height: 100%;
+            border-radius: 0 10px 10px 0;
+            background: hsla(277, 49%, 38%, 0.581);
+        }
+            .mobile {
+                display: none;
+            }
+    .card .card-content {
+        padding: 75px 120px 60px 70px;
+        font-family: 'Inter', sans-serif;
+    }
+        .card .card-content h1:first-of-type {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+            .card .card-content h1:first-of-type span {
+                color: hsl(277, 64%, 61%);
+            }
+        .card .card-content p {
+            font-size: 15px;
+            max-width: 345px;
+            margin-bottom: 75px;
+            color: rgba(255, 255, 255, 0.637);
+        }
+        .card .card-content .down {
+            width: 100%;
+            gap: 65px;
+            display: flex;
+        }
+            .card .card-content .down h1 {
+                margin-bottom: 10px;
+            }
+            .card .card-content .down p{
+                text-transform: uppercase;
+                margin-bottom: 0;
+                font-size: 15px;
+            }
+
+@media (max-width: 1115px) {
+    .card {
+        width: 328px;
+        height: 780px;
+        border-radius: 10px;
+        background: hsl(244, 38%, 16%);
+        color: white;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 120px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+        .card .desktop {
+            display: none;
+        }
+        .card .mobile {
+            display: initial;
+            width: 328px;
+            border-radius: 10px 10px 0 0;
+            background: url(images/image-header-mobile.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+            .card .mobile .cover {
+                width: 328px;
+                height: 240px;
+                border-radius: 10px 10px 0 0;
+                background: hsla(277, 49%, 38%, 0.581);
+            }
+                .mobile {
+                    display: none;
+                }
+        .card .card-content {
+            padding: 40px 25px;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+            .card .card-content h1:first-of-type {
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+                .card .card-content h1:first-of-type span {
+                    color: hsl(277, 64%, 61%);
+                }
+            .card .card-content p {
+                font-size: 15px;
+                max-width: 250px;
+                margin-bottom: 45px;
+                color: rgba(255, 255, 255, 0.637);
+            }
+            .card .card-content .down {
+                width: 100%;
+                gap: 65px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+                .card .card-content .down h1 {
+                    margin-bottom: 10px;
+                }
+                .card .card-content .down p{
+                    text-transform: uppercase;
+                    margin-bottom: 0;
+                    font-size: 15px;
+                    margin-bottom: -35px;
+                }
+}
